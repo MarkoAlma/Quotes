@@ -30,12 +30,13 @@ console.log(randomNumber);
   return (
     <>
     <div>
-    <button onClick={()=>setRandomNumber(veletlenszam(0,quotes.length))}>Alma</button>
+    <button style={{fontWeight:'bold'}} onClick={()=>setRandomNumber(veletlenszam(0,quotes.length-1))}>New Quote</button>
     </div>
-    {randomNumber>-1 && <h1>{quotes[randomNumber]}</h1>}
+    {randomNumber>-1 && <h1 style={{fontSize:'16px', marginTop:'80px', marginBottom:'20px', minHeight:'75px'}}>{quotes[randomNumber]}</h1>}
+    <hr />
     <h1>Dice Roller</h1>
     {kockaNumber>0 && <p style={{fontSize:'50px'}}>{kockaLista[kockaNumber]}</p>}
-    <button onClick={()=>setKockaNumber(veletlenszam(1,6))}>Roll Dice</button>
+    <button style={{fontWeight:'bold'}} onClick={()=>setKockaNumber(veletlenszam(1,6))}>Roll Dice</button>
     </>
   )
 }
